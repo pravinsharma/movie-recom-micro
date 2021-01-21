@@ -1,0 +1,1 @@
+insert into users(username, passwd) values('admin', 'HN/ojpztYwwm+60Qaju/zQ==');
