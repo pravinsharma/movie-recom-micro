@@ -19,3 +19,11 @@ logging:
   level:
     org.springframework.web: ERROR
     org.hibernate: ERROR
+    
+jwt:
+  secret: jYxtu51yl234
+  validity: 18000
+  
+app:
+  url:
+    auth: /api/user/auth

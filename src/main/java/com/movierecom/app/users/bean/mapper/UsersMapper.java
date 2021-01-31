@@ -12,7 +12,14 @@ import com.movierecom.app.users.bean.vo.UsersVO;
  */
 public class UsersMapper {
 	public static UsersVO fromBO(UsersBO bo) {
-		return bo!=null? new UsersVO(bo.getUsername(), bo.getPasswd(), null): null;
+		return bo!=null?
+				UsersVO
+					.builder()
+					.setUsername(bo.getUsername())
+					.setPassword(bo.getPasswd())
+					.build()
+					: null;
+				// new UsersVO(bo.getUsername(), bo.getPasswd(), null): null;
 	}
 	
 	public static UsersBO toBO(UsersVO vo) {

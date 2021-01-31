@@ -1,8 +1,8 @@
-drop table datadict;
+drop table movierecom.datadict;
 
-create table datadict (
+create table movierecom.datadict (
 	id serial primary key,
 	name varchar not null,
 	description varchar not null,
-	created_at timestamp default now()
+	createdat timestamp default now()
 );

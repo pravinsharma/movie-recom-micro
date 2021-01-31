@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EnvelopeVO<T extends IPayloadVO> {
+public class EnvelopeVO<T extends PayloadVO> {
 	private int code;
 	
 	private String message;

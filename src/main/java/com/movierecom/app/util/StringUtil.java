@@ -18,6 +18,24 @@ public class StringUtil {
 		return false;
 	}
 	
+	public static boolean isAllEmpty(String... strings) {
+		for (String str : strings) {
+			if(!isEmpty(str))
+				return false;
+		}
+		
+		return true;
+	}
+	
+	public static boolean isAllFull(String... strings) {
+		for (String str : strings) {
+			if(isEmpty(str))
+				return false;
+		}
+		
+		return true;
+	}
+	
 	public static String toStr(Object obj) {
 		if(obj==null)
 			return null;

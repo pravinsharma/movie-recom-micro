@@ -6,6 +6,7 @@ package com.movierecom.app.util;
 import java.io.UnsupportedEncodingException;
 
 import org.jasypt.util.text.BasicTextEncryptor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.movierecom.app.exception.CodecException;
 
@@ -45,7 +46,6 @@ public class CodecUtil {
 	}
 	
 	public static boolean equals(String inputString, String encodedString) throws CodecException {
-		System.out.println(decode(encodedString) + " = " + inputString);
 		return decode(encodedString).equals(inputString);
 	}
 	
@@ -53,6 +53,7 @@ public class CodecUtil {
 		String str = "admin";
 		
 		System.out.println(CodecUtil.encode(str));
+		System.out.println(new BCryptPasswordEncoder().encode(str));
 	}
 	
 	private static String getEnD() {

@@ -1,8 +1,8 @@
-drop table users;
+drop table movierecom.users;
 
-create table users (
+create table movierecom.users (
 	id serial primary key,
 	username varchar not null unique,
 	passwd varchar not null,
-	created_at timestamp default now()
+	createdat timestamp default now()
 );
